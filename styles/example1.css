@@ -1,0 +1,148 @@
+/* Reset 
+------------------------------------------------------------ */
+* { margin: 0; padding: 0; }
+html { overflow-y: scroll;}
+body { background:#ffffff; font-size: 13px; color: #666666; font-family: Arial, helvetica, sans-serif;}
+ol, ul { list-style: none; margin: 0;}
+ul li { margin: 0; padding: 0;}
+h1 { margin-bottom: 10px; color: #111111;}	
+a, img { outline: none; border:none; color: #000; font-weight: bold; text-transform: uppercase;}
+p { margin: 0 0 10px; line-height: 1.4em; font-size: 1.2em;}
+img { display: block; margin-bottom: 10px;}
+aside { font-style: italic; font-size: 0.9em;}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section { 
+    display: block;
+	}
+	
+/* Structure */
+#wrapper {
+	width: 96%;	
+	max-width: 920px;
+	margin: auto;
+	padding: 2%;
+	} 
+
+	#main {
+		width: 60%;
+		margin-right: 5%;
+		float: left;
+		}		
+		
+	aside {
+		width: 35%;
+		float: right;
+		}
+
+/* Logo H1 */
+/*
+header h1 {
+	height: 70px;
+	width: 160px;
+	float: left;
+	display: block;
+	background: url(../images/demo.gif) 0 0 no-repeat;
+	text-indent: -9999px;
+	}
+	*/
+header h1 {
+	padding-top:25px;
+	height: 50px;
+	width: 280px;
+	float: left;
+	display: block;
+	}
+/* Nav */
+header nav {
+	float: right;
+	margin-top: 40px; 
+	}
+	
+	header nav li {
+		display: inline;
+		margin-left: 15px;
+		}
+
+#skipTo {
+	display: none;
+	}
+	#skipTo li {
+		background: #b1fffc;
+		}
+
+/* Banner */			
+#banner {
+	float: left;
+	margin-bottom: 15px;
+	width: 100%;
+	}
+
+	#banner img {
+		width: 100%;
+		}
+
+.button { 
+  font-weight: bold;
+  background-color: #A69520;
+  text-transform: uppercase;
+  font-family: verdana;
+  border: 1px solid #282727;
+  font-size: 1.2em;
+  line-height: 1.25em;
+  padding: 6px 20px;
+  cursor: pointer;
+  color: #000;
+  text-decoration: none;
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  box-shadow: 1px 3px 5px #555;
+  -moz-box-shadow: 1px 3px 5px #555;
+  -webkit-box-shadow: 1px 3px 5px #555;
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#FFF089), to(#A69520));
+  background: -moz-linear-gradient(#FFF089, #A69520);
+  background: -o-linear-gradient(#FFF089, #A69520);
+  background: linear-gradient(top center, #FFF089, #A69520);
+}
+
+.button:active, .button:focus {
+  color: #000;
+  background: -webkit-gradient(linear, 0 0, 100% 0,
+    from(#A69520), to(#FFF089));
+  background: -moz-linear-gradient(#A69520, #FFF089);
+  background: -o-linear-gradient(#A69520, #FFF089);
+  background: linear-gradient(left center, #A69520, #FFF089);
+}
+
+input.button {
+  line-height:1.22em;
+}
+
+#info p { margin: 0 0 2px; line-height: 1.2em; font-size: 1em;}
+
+
+/* Media Queries */
+@media screen and (max-width: 480px) {
+
+	#skipTo {
+		display: block;
+		}
+	
+	header nav, #main, aside {
+		float: left;
+		clear: left;
+		margin: 0 0 10px; 
+		width: 100%;
+		}	
+		header nav li {
+			margin: 0;
+			background: #efefef;
+			display: block;
+			margin-bottom: 3px;
+			}
+			header nav a {
+				display: block;
+				padding: 10px;
+				text-align: center;
+				}			
+}

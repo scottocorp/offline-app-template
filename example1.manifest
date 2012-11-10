@@ -1,0 +1,11 @@
+CACHE MANIFEST 
+# r128
+# JavaScript
+./scripts/example1.js
+./scripts/respond.min.js
+http://placekitten.com/980/125
+
+# stylesheets
+./styles/example1.css
+
+# images
