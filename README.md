@@ -9,7 +9,7 @@ HTML5 Offline App template (demo [here](http://bit-taming.com/content/projects/a
  
 Overview:
 ---------
-What is the miniumum amount of code necessary to build a mobile web application that:
+What is the minimum amount of code necessary to build a mobile web application that:
 * Can collect user data whilst offline,
 * Automatically post any collected data once online,
 * Responsively adapt to any device it is viewed upon
