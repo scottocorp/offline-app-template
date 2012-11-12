@@ -30,7 +30,7 @@ But each on it's own wasn't particularly compelling. It was only after combining
 Online demo:
 ------------
 [HTML5 Offline App template Demo](http://bit-taming.com/content/projects/appcachetest/example1.html)   
-[http://bit.ly/QAr7Aa]
+[http://bit.ly/QAr7Aa](http://bit.ly/QAr7Aa)
 
 Install/View:
 -------------
