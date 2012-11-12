@@ -10,9 +10,9 @@ HTML5 Offline App template (demo [here](http://bit-taming.com/content/projects/a
 Overview:
 ---------
 What is the miniumum amount of code necessary to build a mobile web application that:
-*1. Can collect user data whilst offline,
-*2. Automatically post any collected data once online,
-*3. Responsively adapt to any device it is viewed upon
+* Can collect user data whilst offline,
+* Automatically post any collected data once online,
+* Responsively adapt to any device it is viewed upon
 ...using only HTML, CSS and javascript? 
 
 This small HTML5 web app is an attempt to answer this question and provide a base for more complex apps. 
