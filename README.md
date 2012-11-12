@@ -45,7 +45,7 @@ UNLESS example1.manifest is modified OR the offline cache is manually cleared.
 * Hence the app can be used in situations where there is no connection to the server.
 * Try it and see: disconnect from the internet and refresh the page. 
 * Also, reconnect to the internet, modify some copy on the page, browse and click "Check for updates". This forces the app to
- update it's cache, and refresh the page, but only if `example1.manifest` had been modified first.
+ update it's cache, and refresh the page, but only if example1.manifest had been modified first.
 * "Add a record" adds an item to `records` in LocalStorage. If the app is online then the entire contents of `records` will
  also be uploaded. (I'll let you provide the actual upload code!)
 * If the app is offline then no upload is performed. However, upon detection of being online, the app will fetch `records` 
