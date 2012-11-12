@@ -12,7 +12,7 @@ Overview:
 What is the minimum amount of code necessary to build a mobile web application that:
 * Can collect user data whilst offline,
 * Automatically post any collected data once online,
-* Responsively adapt to any device it is viewed upon 
+* Responsively adapt to any device it is viewed upon  
 ...using only HTML, CSS and javascript? 
 
 This small HTML5 web app is an attempt to answer this question and provide a base for more complex apps. 
