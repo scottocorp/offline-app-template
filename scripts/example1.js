@@ -131,7 +131,7 @@ window.applicationCache.oncached = function(e) {
 }
 
 window.applicationCache.onerror = function(e) {
-    log("Application cache error");
+    log("Application cache error - perhaps the application is offline");
 }
 
 window.addEventListener("offline", function(e) {

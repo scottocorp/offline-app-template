@@ -28,8 +28,15 @@ footer, header, hgroup, menu, nav, section {
 		margin-right: 5%;
 		float: left;
 		}		
-		
-	aside {
+/*
+	#main {
+		width: 60%;
+		margin-right: 5%;
+		float: left;
+		clear:left;
+		}		
+	*/	
+aside {
 		width: 35%;
 		float: right;
 		}

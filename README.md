@@ -58,20 +58,22 @@ Successfully tested on:
 -----------------------
 * Chrome (v.23) on MacOS
 * Safari on iPad (iOS v.6.0)
+* Android (v2.2 and v.4) browser
 
 
 Issues/problems testing on:
 ---------------------------
 * Android (v.2.2) native browser: The cache doesn't seem to be getting created, though the 
 `navigator.onLine` / `navigator.offLine` functionality appears to be OK 
+UPDATE - this was fixed by adding an .htaccess file containing "AddType text/cache-manifest manifest" to the app folder. 
 
 
 TODO list:
 ----------
 * Implement a cookie workaround for those using Internet Explorer 9 and below. Here is a guide:
 [Best practices for a faster web app with HTML5](http://www.html5rocks.com/en/tutorials/speed/quick/)
-* Find a workaround for the Android (v2.2) issue above
 * Implement authentication
+* Set up some kind of testing framework
 
 
 The following concepts and resources were found to be useful:
@@ -86,4 +88,4 @@ provided the responsive smarts behind the page.
 * Chapter 1 of [Web Development Recipes (Hogan, et al)](http://www.waterstones.com/waterstonesweb/products/brian+p-+hogan/chris+warren/mike+weber/web+development+recipes/8848417/) 
 provided the 100% CSS-generated buttons. 
 * [Placekitten](http://placekitten.com/) provided the adorable kitten placeholders.
-
+* [This link](http://softwareas.com/offline-apps-with-application-cache-quickstart-tips-and-deep-dive) helped solve the issues on android mentioned above

@@ -7,5 +7,5 @@ CACHE:
 example1.html
 scripts/example1.js
 scripts/respond.min.js
-#http://placekitten.com/980/125
+http://placekitten.com/980/125
 styles/example1.css
