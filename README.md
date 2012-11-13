@@ -64,7 +64,7 @@ Successfully tested on:
 Issues/problems testing on:
 ---------------------------
 * Android (v.2.2) native browser: The cache doesn't seem to be getting created, though the 
-`navigator.onLine` / `navigator.offLine` functionality appears to be OK 
+`navigator.onLine` / `navigator.offLine` functionality appears to be OK   
 UPDATE - this was fixed by adding an .htaccess file containing "AddType text/cache-manifest manifest" to the app folder. 
 
 
