@@ -16,6 +16,8 @@ onload = function(e) {
     document.getElementById("installButton").onclick = install;
     document.getElementById("addButton").onclick = addrecord;
 
+    // Show queue of items stored in LocalStorage
+    showQueue();
     // Synchronize with the server if the browser is now online
     if(navigator.onLine) {
         uploadRecords();
@@ -31,10 +33,31 @@ handleRecord = function() {
 	
 	// Store the data record locally
 	storeRecord(content);
-	
+
+        showQueue();
+
 	// Upload the data record
 	if(navigator.onLine) {
-        uploadRecords();
+           uploadRecords();
+    }
+}
+
+
+showQueue = function() {
+
+    // Retrieve data from LocalStorage
+    var records = JSON.parse(localStorage.records || "[]");
+
+    var q = document.getElementById("queue-items");
+    // Clear queue html
+    while (q.hasChildNodes()) {
+        q.removeChild(q.firstChild);
+    }
+    // Add html for each queue item.
+    for (var i in records) {
+        var p = document.createElement("p");
+        p.innerHTML = records[i].content;
+        q.appendChild(p);
     }
 }
 
@@ -44,24 +67,37 @@ uploadRecords = function() {
 	var records = JSON.parse(localStorage.records || "[]");
 	
 	// Upload data to the server.
-	for (var i=0; i<records.length; i++)
+        while (records.length) 
 	{
-		// This following may be replaced with appropriate REST calls...  
+	    var item = records.shift();
+
+	    // This following may be replaced with appropriate REST calls...  
 		
 	    //var request = new XMLHttpRequest();
 	    //request.open("POST", "http://someurl.com", true);
 	    //request.send(records[i].content);
 
-		log("record uploaded: "+records[i].content);
+	    // Normally, check result of upload, but for now consider online as success.
+	    var success = navigator.onLine;
+
+	    // Instead check if we are still online for each record.
+	    if (success) {	
+		log("record uploaded: "+item.content);
+            } else {
+                records.unshift(item);  // Put item back at top of list.
+                break;                  // Stop on first failure.
+            }
 	}
 	
-	// Clear data from LocalStorage
-	localStorage.records='[]';
+	// Put back any unsent messages to LocalStorage
+	localStorage.records = JSON.stringify(records);
+
+        showQueue();
 }
 
 storeRecord = function(content) {
 	
-	log("record stored: "+content);
+    log("record stored: "+content);
 	
     // Retrieve stored data
     var records = JSON.parse(localStorage.records || "[]");
@@ -152,12 +188,11 @@ log = function() {
     var p = document.createElement("p");
     var message = Array.prototype.join.call(arguments, " ");
     p.innerHTML = message;
-    document.getElementById("info").appendChild(p);
+    document.getElementById("log-items").appendChild(p);
 }
 
 /* Convert applicationCache status codes into messages */
 showCacheStatus = function(n) {
-    statusMessages = ["Uncached","Idle","Checking","Downloading","Update Ready","Obsolete"];
-    return statusMessages[n];
+    return ["Uncached","Idle","Checking","Downloading","Update Ready","Obsolete"][n];
 }
 
